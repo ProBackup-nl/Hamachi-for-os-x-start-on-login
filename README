@@ -1,0 +1,20 @@
+1. Make sure Hamachi is installed and configured correctly
+2. Store your Hamachi network join password stored in your keychain.app, where:
+   a. <Name:> is set to 'Hamachi' (without quotes)
+   b. <Account:> set to your network name (as listed below)
+3. Double click the startHamachi.command file to install.
+   notes: 
+   a. you will be asked if the script may access your password in keychain (once during install and every time you are disjoined from the network)
+   b. it might require a reboot before it actually runs
+
+ Optional: set environment variable HAMACHI_NETWORK that stores the hamachi network name
+  - set an environment variable in ~/.MacOSX/environment.plist (reboot required)
+  - a pref pane for editing environment.plist is available on http://www.epikentros.net/Main/Mac_Software.html
+  - without this environment variable, its value will be stored in a file name startHamachiParams.sh
+  - this var is stored in the environment or startHamachiParams.sh to not needing to edit this startHamachi.sh file after an upgrade (separation of data and program logic)
+
+This script runs on login via launchd by ~/LaunchAgents/nl.probackup.startHamachi.plist
+
+To uninstall, in Terminal.app enter $ startHamachi.command remove
+
+Tested on Mac OS X 10.6.8
