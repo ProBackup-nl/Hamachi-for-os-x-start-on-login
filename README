@@ -17,4 +17,4 @@ This script runs on login via launchd by ~/LaunchAgents/nl.probackup.startHamach
 
 To uninstall, in Terminal.app enter $ startHamachi.command remove
 
-Tested on Mac OS X 10.6.8
+Tested on Mac OS X 10.6.8 and Hamachi ver 0.9.9.9-20
